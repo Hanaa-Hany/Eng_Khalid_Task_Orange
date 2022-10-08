@@ -6,16 +6,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.details.DetailsActivity"
+    android:background="#F4EEEE"
     >
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        app:layout_constraintStart_toStartOf="@id/recycler_image"
+        app:layout_constraintEnd_toStartOf="@id/recycler_image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="3dp"
+        app:contentPadding="@dimen/_7sdp"
+        app:cardCornerRadius="@dimen/_3sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:paddingStart="@dimen/_4sdp"
+            android:id="@+id/arrow_back"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_image"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_200sdp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_marginStart="@dimen/_50sdp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/image_item_corner"
+        android:paddingStart="@dimen/_10sdp"/>
 
     <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
         android:id="@+id/dots_indicator"
